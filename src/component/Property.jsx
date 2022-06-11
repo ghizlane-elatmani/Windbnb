@@ -5,7 +5,7 @@ import { MdGrade } from "react-icons/md";
 const Property = ({ property }) => {
   return (
     <div className="card">
-      <img src={property.photo} alt="Property photo" />
+      <img src={property.photo} alt={property.title} />
       <div className="property-desc">
         {property.superHost ? <p className="super-host">super host</p> : ""}
         <p className="type">{property.type}</p>
