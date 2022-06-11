@@ -15,15 +15,34 @@ function App() {
     setPropertyList(properties);
   }, []);
 
-  function handleFormLocation(location = "none", guests) {
-    if (location === "" && guests === 0) {
+  function handleFormLocation(location = "", guests = 0) {
+    if (location === "" && guests <= 0) {
       return;
     }
 
-    const properties = propertyList.filter(
-      (property) => property.city === location
-    );
-    setPropertyList(properties);
+    if (location !== "" && guests > 0) {
+      const properties = propertyList.filter(
+        (property) => property.city === location && property.maxGuests >= guests
+      );
+      setPropertyList(properties);
+      return;
+    }
+
+    if (location !== "") {
+      const properties = propertyList.filter(
+        (property) => property.city === location
+      );
+      setPropertyList(properties);
+      return;
+    }
+
+    if (guests > 0) {
+      const properties = propertyList.filter(
+        (property) => property.maxGuests >= guests
+      );
+      setPropertyList(properties);
+      return;
+    }
   }
 
   return (
@@ -43,6 +62,10 @@ function App() {
       />
 
       <div className="grid">
+        <div className="grid-header">
+          <h2>Stay in Finland</h2>
+          <p className="grid-header-length">{propertyList.length}+ stays</p>
+        </div>
         {propertyList.map((property) => {
           return <Property key={uuidv4()} property={property} />;
         })}

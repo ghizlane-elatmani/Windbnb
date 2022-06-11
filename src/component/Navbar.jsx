@@ -1,13 +1,12 @@
 import "../css/Navbar.css";
 import Logo from "../img/logo.svg";
 import { MdSearch } from "react-icons/md";
-import SearchBar from "./SearchBar";
 import stays from "../img/stays.json";
 
 const Navbar = ({ showSearchBar, setShowSearchBar, setPropertyList }) => {
   return (
     <div className="navbar">
-      <div className="logo">
+      <div className="logo" onClick={() => window.location.reload(false)}>
         <img src={Logo} alt="Windbnb Logo" />
       </div>
       <div

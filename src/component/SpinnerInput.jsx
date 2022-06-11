@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import "../css/SpinnerInput.css";
 
 const SpinnerInput = ({ adults, setAdults, children, setChildren }) => {
   return (

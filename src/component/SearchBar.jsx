@@ -27,7 +27,7 @@ const SearchBar = ({ showSearchBar, setShowSearchBar, fnHandleForm }) => {
     <div className="search-bar">
       <div className="wrapper-search-bar">
         <nav className="nav">
-          <p className="">Edit your search</p>
+          <p className="edit">Edit your search</p>
           <MdClear
             className="cursor-pointer"
             onClick={() => {

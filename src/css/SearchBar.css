@@ -7,7 +7,7 @@
 .wrapper-search-bar {
   max-width: 1200px;
   margin-inline: auto;
-  min-height: 50vh;
+  min-height: 70vh;
   padding: 2rem 3rem;
 }
 
@@ -46,6 +46,17 @@ input[type="text"]:focus {
   padding: 0.5rem 0;
   border: none;
   outline: none;
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+}
+
+.form-group label {
+  font-family: Mulish;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 11px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .button-form {
@@ -65,19 +76,13 @@ input[type="text"]:focus {
   color: #f2f2f2;
 }
 
-.form-group-guest {
-  position: relative;
-}
-
-.wrapper-input {
-  border: 1px solid rgb(240, 240, 240);
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 1rem 2rem;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.edit {
+  font-family: "Mulish", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 @media only screen and (min-width: 600px) {
