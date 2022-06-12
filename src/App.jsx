@@ -3,6 +3,7 @@ import Navbar from "./component/Navbar";
 import Property from "./component/Property";
 import stays from "./img/stays.json";
 import SearchBar from "./component/SearchBar";
+import Footer from "./component/Footer";
 import "./css/App.css";
 import { v4 as uuidv4 } from "uuid";
 
@@ -70,6 +71,8 @@ function App() {
           return <Property key={uuidv4()} property={property} />;
         })}
       </div>
+
+      <Footer />
     </div>
   );
 }
